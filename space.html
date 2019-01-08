@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Based off of https://cdn.dribbble.com/users/485324/screenshots/1581316/fireart_blog.jpg -->
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-size: 62.5%;
+      padding: 2em;
+      background: #1c1611;
+    }
+
+
+
+    .space-shuttle {
+      height: 25.6em;
+      width: 6em;
+      background: #f4d5a4;
+      margin: 0 auto;
+      position: relative;
+
+      border-top-left-radius: 2.8em 10em;
+      border-top-right-radius: 2.8em 10em;
+    }
+
+    .space-shuttle__bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #e89d38;
+      height: 5.6em;
+    }
+
+    .space-shuttle__engine {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 1em;
+    }
+
+    .space-shuttle__engine::before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 1.5em;
+      border-bottom: 0.5em solid #e68431;
+      border-left: 0.1em solid transparent; 
+      border-right: 0.1em solid transparent;
+    }
+
+  </style>
+
+  <section class="space-shuttle">
+    <footer class="space-shuttle__bottom">
+      <div class="space-shuttle__engine"></div>
+    </footer>
+  </section>
+  
+
+
+  
+</body>
+</html>
