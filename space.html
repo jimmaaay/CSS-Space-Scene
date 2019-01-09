@@ -8,62 +8,137 @@
 </head>
 <body>
   <!-- Based off of https://cdn.dribbble.com/users/485324/screenshots/1581316/fireart_blog.jpg -->
-  <style>
-    body {
-      min-height: 100vh;
-      margin: 0;
-      font-size: 62.5%;
-      padding: 2em;
-      background: #1c1611;
-    }
+<style>
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 62.5%;
+  padding: 2em;
+  background: #1c1611;
+  position: relative;
+
+  padding-top: 15em;
+}
 
 
 
-    .space-shuttle {
-      height: 25.6em;
-      width: 6em;
-      background: #f4d5a4;
-      margin: 0 auto;
-      position: relative;
+.space-shuttle {
+  height: 25.6em;
+  width: 6em;
+  background: #f4d5a4;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-      border-top-left-radius: 2.8em 10em;
-      border-top-right-radius: 2.8em 10em;
-    }
+  border-top-left-radius: 2.8em 10em;
+  border-top-right-radius: 2.8em 10em;
+}
 
-    .space-shuttle__bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #e89d38;
-      height: 5.6em;
-    }
+.space-shuttle__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e89d38;
+  height: 5.6em;
+}
 
-    .space-shuttle__engine {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      height: 1em;
-    }
+.space-shuttle__engine {
+  position: absolute;
+  top: 100%;
+  left: 0.5em;
+  height: 1em;
+}
 
-    .space-shuttle__engine::before {
-      content: '';
-      display: block;
-      height: 0;
-      width: 1.5em;
-      border-bottom: 0.5em solid #e68431;
-      border-left: 0.1em solid transparent; 
-      border-right: 0.1em solid transparent;
-    }
+.space-shuttle__engine--right {
+  right: 0.5em;
+  left: auto;
+}
 
-  </style>
+.space-shuttle__engine::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 1em;
+  height: 0.4em;
+  background: #e68431;
+  /* border-bottom: 0.5em solid #e68431;
+  border-left: 0.1em solid transparent; 
+  border-right: 0.1em solid transparent; */
+}
 
-  <section class="space-shuttle">
-    <footer class="space-shuttle__bottom">
-      <div class="space-shuttle__engine"></div>
-    </footer>
-  </section>
+.space-shuttle__engine::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 0;
+  width: 1.2em;
+  border-bottom: 0.6em solid #efb23d;
+  border-left: 0.1em solid transparent; 
+  border-right: 0.1em solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.big-rocket-ting {
+  height: 33em;
+  width: 8em;
+  background:#c54620;
+  margin: 0 auto;
+  position: relative;
+  border-top-left-radius: 4em 9em;
+  border-top-right-radius: 4em 9em;
+  /* border-top-left-radius: 3.8em 11em; */
+  /* border-top-right-radius: 3.8em 11em; */
+}
+
+.big-rocket-ting__nose {
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  background: #c54620;
+  transform: translateX(-50%) rotate(-45deg);
+  width: 110%;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.big-rocket-ting__nose::before {
+  content: '';
+  padding-bottom: 100%;
+  display: block;
+}
+/* 
+.big-rocket-ting::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  
+
+
+  
+} */
+
+</style>
+
+  <div class="big-rocket-ting">
+    <header class="big-rocket-ting__nose"></header>
+
+    <section class="space-shuttle">
+      <footer class="space-shuttle__bottom">
+        <div class="space-shuttle__engine space-shuttle__engine--left"></div>
+        <div class="space-shuttle__engine space-shuttle__engine--right"></div>
+      </footer>
+    </section>
+
+  </div>
+
+  
   
 
 
