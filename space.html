@@ -9,6 +9,19 @@
 <body>
   <!-- Based off of https://cdn.dribbble.com/users/485324/screenshots/1581316/fireart_blog.jpg -->
 <style>
+
+html {
+  --brown: #522b13;
+
+  --cream: #f4d5a4;
+  --darkCream: #e8b97f;
+
+  --lightOrange: #e89d38;
+  --darkOrange: #c54620;
+
+  --engineYellow: #efb23d;
+  --engineOrange: #e68431;
+}
 body {
   min-height: 100vh;
   margin: 0;
@@ -24,7 +37,7 @@ body {
 .space-shuttle {
   height: 25em;
   width: 6em;
-  background: #f4d5a4;
+  background: var(--cream);
   margin: 0 auto;
   position: absolute;
   bottom: 0;
@@ -40,7 +53,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #e89d38;
+  background: var(--lightOrange);
   height: 5.6em;
 }
 
@@ -62,7 +75,7 @@ body {
   height: 0;
   width: 1em;
   height: 0.4em;
-  background: #e68431;
+  background: var(--engineOrange);
 }
 
 .space-shuttle__engine::after {
@@ -71,7 +84,7 @@ body {
   display: block;
   height: 0;
   width: 1.2em;
-  border-bottom: 0.6em solid #efb23d;
+  border-bottom: 0.6em solid var(--engineYellow);
   border-left: 0.1em solid transparent; 
   border-right: 0.1em solid transparent;
   left: 50%;
@@ -81,7 +94,7 @@ body {
 .big-rocket-ting {
   height: 33em;
   width: 8em;
-  background: linear-gradient(transparent 6.9em, #c54620 7em);
+  background: linear-gradient(transparent 6.9em, var(--darkOrange) 7em);
   margin: 0 auto;
   position: relative;
   border-top-left-radius: 7em 9em;
@@ -107,7 +120,7 @@ body {
   position: absolute;
   top: 2em;
   left: 50%;
-  background: linear-gradient(-135deg, #522b13 2.4em, #c54620 2.5em);
+  background: linear-gradient(-135deg, var(--brown) 2.4em, #c54620 2.5em);
 }
 
 .big-rocket-ting__nose::before {
@@ -118,11 +131,20 @@ body {
 
 .side-booster {
   height: 28em;
-  background: #f4d5a4;
-  width: 3.2em;
+  width: 3.4em;
   position: absolute;
-  bottom: -2.8em;
-  background: linear-gradient(transparent 3em, #f4d5a4 3.1em);
+  bottom: -1em;
+}
+
+.side-booster::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 3em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, var(--cream) 50%, var(--darkCream) 50%);
 }
 
 .side-booster--left {
@@ -138,15 +160,67 @@ body {
   top: 1em;
   left: 50%;
   transform: translateX(-50%) scaleY(1.2) rotate(-45deg);
-  background: #f4d5a4;
-  width: 110%;
+  width: 3.8em;
   border-radius: 80% 0.1em 55% 50% / 55% 0.1em 80% 50%;
+  background: linear-gradient(135deg, var(--cream) 50%, #e8b97f 50%);
 }
 
 .side-booster__nose::before {
   content: '';
   display: block;
   padding-bottom: 100%;
+}
+
+.side-booster__stripe {
+  background: var(--brown);
+  height: 0.8em;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.side-booster__stripe--1 {
+  top: 4.5em;
+}
+
+.side-booster__stripe--2 {
+  top: 11.5em;
+}
+
+.side-booster__stripe--3 {
+  top: 14em;
+}
+
+.side-booster__engine {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.side-booster__engine::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 1.8em;
+  border-bottom: 0.5em solid var(--engineOrange);
+  border-left: 0.2em solid transparent; 
+  border-right: 0.2em solid transparent;
+  margin: 0 auto;
+}
+
+.side-booster__engine::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 0;
+  width: 2.8em;
+  border-bottom: 0.7em solid var(--engineYellow);
+  border-left: 0.3em solid transparent; 
+  border-right: 0.3em solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 </style>
@@ -162,13 +236,13 @@ body {
     </section>
 
 
-    <section class="side-booster side-booster--left">
+    <aside class="side-booster side-booster--left">
       <header class="side-booster__nose"></header>
-    </section>
-
-    <section class="side-booster side-booster--right">
-      <header class="side-booster__nose"></header>
-    </section>
+      <span class="side-booster__stripe side-booster__stripe--1"></span>
+      <span class="side-booster__stripe side-booster__stripe--2"></span>
+      <span class="side-booster__stripe side-booster__stripe--3"></span>
+      <footer class="side-booster__engine"></footer>
+    </aside>
 
   </div>
 
