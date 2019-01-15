@@ -9,15 +9,20 @@
 <body>
   <!-- Based off of https://cdn.dribbble.com/users/485324/screenshots/1581316/fireart_blog.jpg -->
 <style>
+  /** TODO: for space shuttle wings have a look at using metaballs?? **/
 
 html {
   --brown: #522b13;
+  --darkBrown: #4b2007;
 
   --cream: #f4d5a4;
   --darkCream: #e8b97f;
 
   --lightOrange: #e89d38;
+  --darkLightOrange: #bf702d;
+
   --darkOrange: #c54620;
+  --darkDarkOrange: #a53518;
 
   --engineYellow: #efb23d;
   --engineOrange: #e68431;
@@ -35,17 +40,36 @@ body {
 
 
 .space-shuttle {
-  height: 25em;
+  height: 26em;
   width: 6em;
   background: var(--cream);
   margin: 0 auto;
   position: absolute;
-  bottom: 0;
+  bottom: -1em;
   left: 0;
   right: 0;
-
+  background: linear-gradient(to right, var(--cream) 50%, var(--darkCream) 50%);
   border-top-left-radius: 2.8em 10em;
   border-top-right-radius: 2.8em 10em;
+}
+
+.space-shuttle::before,
+.space-shuttle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.1em;
+  background: linear-gradient(to right, #dfbe88 50%, #cd9d68 50%);
+}
+
+.space-shuttle::before {
+  top: 8.4em;
+}
+
+.space-shuttle::after {
+  top: 15.2em;
 }
 
 .space-shuttle__bottom {
@@ -53,7 +77,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--lightOrange);
+  background: linear-gradient(to right, var(--lightOrange) 50%, var(--darkLightOrange) 50%);
   height: 5.6em;
 }
 
@@ -91,6 +115,80 @@ body {
   transform: translateX(-50%);
 }
 
+.space-shuttle__tail {
+  height: 8.5em;
+  width: 1em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.space-shuttle__tail::before {
+  content: '';
+  position: absolute;
+  top: 1.9em; /* 1.9 to fix small gap in FF */
+  left: 0;
+  right: 0;
+  bottom: 1.2em;
+  background: linear-gradient(to right, var(--cream) 50%, var(--lightOrange) 50%);
+}
+
+.space-shuttle__tail__top {
+  position: relative;
+}
+
+.space-shuttle__tail__top::before,
+.space-shuttle__tail__top::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.space-shuttle__tail__top::before {
+  border-width: 0 0 2em 0.51em; /** 0.51 to fix small gap in FF */
+  border-color: transparent transparent var(--cream) transparent;
+  left: 0;
+}
+
+.space-shuttle__tail__top::after {
+  border-width: 2em 0 0 0.51em; /** 0.51 to fix small gap in FF */
+  border-color: transparent transparent transparent var(--lightOrange);
+  right: 0;
+}
+
+.space-shuttle__tail__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.space-shuttle__tail__bottom::before,
+.space-shuttle__tail__bottom::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  bottom: 0;
+}
+
+.space-shuttle__tail__bottom::before {
+  border-width: 0 0.51em 1.2em 0; /** 0.51 to fix small gap in FF */
+  border-color: transparent var(--cream) transparent transparent;
+  left: 0;
+}
+
+.space-shuttle__tail__bottom::after {
+  border-width: 1.2em 0.51em 0 0; /** 0.51 to fix small gap in FF */
+  border-color: var(--lightOrange) transparent  transparent transparent;
+  right: 0;
+}
+
 .big-rocket-ting {
   height: 33em;
   width: 8em;
@@ -101,13 +199,25 @@ body {
   border-top-right-radius: 7em 9em;
 }
 
-.big-rocket-ting::after {
+.big-rocket-ting::before {
   content: '';
   display: block;
   position: absolute;
   left: 0;
   right: 0;
-  background: #db8f58;
+  bottom: 0;
+  top: 6.9em;
+  background: linear-gradient(to right, var(--darkOrange) 50%, var(--darkDarkOrange) 50%);
+}
+
+.big-rocket-ting::after {
+  content: '';
+  display: block; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* background: #db8f58; */
+  background: linear-gradient(to right, #db8f58 50%, #c04e26 50%);
   height: 0.2em;
   z-index: 1;
   top: 7.4em;
@@ -129,6 +239,18 @@ body {
   display: block;
 }
 
+.big-rocket-ting__nose::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 80% 0.2em 55% 50% / 55% 0.2em 80% 50%;
+  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.19) 50%);
+}
+
 .side-booster {
   height: 28em;
   width: 3.4em;
@@ -145,6 +267,17 @@ body {
   left: 0;
   right: 0;
   background: linear-gradient(to right, var(--cream) 50%, var(--darkCream) 50%);
+}
+
+.side-booster::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background: linear-gradient(to right, var(--brown) 50%, var(--darkBrown) 50%);
 }
 
 .side-booster--left {
@@ -230,6 +363,10 @@ body {
 
     <section class="space-shuttle">
       <footer class="space-shuttle__bottom">
+        <div class="space-shuttle__tail">
+          <div class="space-shuttle__tail__top"></div>
+          <div class="space-shuttle__tail__bottom"></div>
+        </div>
         <div class="space-shuttle__engine space-shuttle__engine--left"></div>
         <div class="space-shuttle__engine space-shuttle__engine--right"></div>
       </footer>
@@ -237,6 +374,14 @@ body {
 
 
     <aside class="side-booster side-booster--left">
+      <header class="side-booster__nose"></header>
+      <span class="side-booster__stripe side-booster__stripe--1"></span>
+      <span class="side-booster__stripe side-booster__stripe--2"></span>
+      <span class="side-booster__stripe side-booster__stripe--3"></span>
+      <footer class="side-booster__engine"></footer>
+    </aside>
+
+    <aside class="side-booster side-booster--right">
       <header class="side-booster__nose"></header>
       <span class="side-booster__stripe side-booster__stripe--1"></span>
       <span class="side-booster__stripe side-booster__stripe--2"></span>
