@@ -132,7 +132,7 @@ body {
 
 .space-shuttle__tail {
   height: 8.5em;
-  width: 1em;
+  width: 0.8em;
   margin: 0 auto;
   position: relative;
 }
@@ -163,13 +163,13 @@ body {
 }
 
 .space-shuttle__tail__top::before {
-  border-width: 0 0 2em 0.51em; /** 0.51 to fix small gap in FF */
+  border-width: 0 0 2em 0.4em;
   border-color: transparent transparent var(--cream) transparent;
   left: 0;
 }
 
 .space-shuttle__tail__top::after {
-  border-width: 2em 0 0 0.51em; /** 0.51 to fix small gap in FF */
+  border-width: 2em 0 0 0.4em;
   border-color: transparent transparent transparent var(--lightOrange);
   right: 0;
 }
@@ -193,13 +193,13 @@ body {
 }
 
 .space-shuttle__tail__bottom::before {
-  border-width: 0 0.51em 1.2em 0; /** 0.51 to fix small gap in FF */
+  border-width: 0 0.4em 1.2em 0;
   border-color: transparent var(--cream) transparent transparent;
   left: 0;
 }
 
 .space-shuttle__tail__bottom::after {
-  border-width: 1.2em 0.51em 0 0; /** 0.51 to fix small gap in FF */
+  border-width: 1.2em 0.4em 0 0;
   border-color: var(--lightOrange) transparent  transparent transparent;
   right: 0;
 }
@@ -242,14 +242,14 @@ body {
   height: 20em;
   background: currentColor;
   border-radius: 50%;
-  margin-top: 10em;
+  margin-top: 9.5em;
   /* border-top:  0.5em solid white;
   border-right: 0.5em solid white;
   border-left: 0.5em solid white; */
 }
 
 .space-shuttle__wings--2 {
-  transform: translateX(-50%) scale(0.92) translateY(0.8em);
+  transform: translateX(-50%) scale(0.92) translateY(0.85em);
   color: #e66f2c;
 }
 
@@ -425,37 +425,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-
-/* .wings {
-  position: relative;
-  display: inline-flex;
-  height: 200px;
-  overflow: hidden;
-}
-
-.wings__inner {
-  filter: url(#goo);
-}
-
-.wings__circle-1 {
-  width: 100px;
-  height: 100px;
-  background: orange;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.wings__circle-2 {
-  width: 300px;
-  height: 300px;
-  background: orange;
-  border-radius: 50%;
-  margin-top: 50px;
-} */
 
 </style>
 
