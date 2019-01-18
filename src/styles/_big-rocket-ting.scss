@@ -1,5 +1,3 @@
-
-
 .big-rocket-ting {
   height: 33em;
   width: 8em;
@@ -8,56 +6,56 @@
   position: relative;
   border-top-left-radius: 7em 9em;
   border-top-right-radius: 7em 9em;
-}
 
-.big-rocket-ting::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 6.9em;
-  background: linear-gradient(to right, var(--darkOrange) 50%, var(--darkDarkOrange) 50%);
-}
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
 
-.big-rocket-ting::after {
-  content: '';
-  display: block; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  /* background: #db8f58; */
-  background: linear-gradient(to right, #db8f58 50%, #c04e26 50%);
-  height: 0.2em;
-  z-index: 1;
-  top: 7.4em;
-}
+  &::before {
+    bottom: 0;
+    top: 6.9em;
+    background: linear-gradient(to right, var(--darkOrange) 50%, var(--darkDarkOrange) 50%);
+  }
 
-.big-rocket-ting__nose {
-  border-radius: 80% 0.2em 55% 50% / 55% 0.2em 80% 50%;
-  transform: translateX(-50%) scaleY(1.2) rotate(-45deg);
-  width: 110.5%;
-  position: absolute;
-  top: 2em;
-  left: 50%;
-  background: linear-gradient(-135deg, var(--brown) 2.4em, #c54620 2.5em);
-}
+  &::after {
+    background: linear-gradient(to right, #db8f58 50%, #c04e26 50%);
+    height: 0.2em;
+    z-index: 1;
+    top: 7.4em;
+  }
 
-.big-rocket-ting__nose::before {
-  content: '';
-  padding-bottom: 100%;
-  display: block;
-}
+  &__nose {
+    border-radius: 80% 0.2em 55% 50% / 55% 0.2em 80% 50%;
+    transform: translateX(-50%) scaleY(1.2) rotate(-45deg);
+    width: 110.5%;
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    background: linear-gradient(-135deg, var(--brown) 2.4em, #c54620 2.5em);
 
-.big-rocket-ting__nose::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 80% 0.2em 55% 50% / 55% 0.2em 80% 50%;
-  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.19) 50%);
+    &::before {
+      content: '';
+      padding-bottom: 100%;
+      display: block;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 80% 0.2em 55% 50% / 55% 0.2em 80% 50%;
+      background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.19) 50%);
+    }
+
+  }
+
 }
