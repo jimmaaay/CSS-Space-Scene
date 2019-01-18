@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <svg>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </svg>
+
+  <div class="big-rocket-ting">
+    <header class="big-rocket-ting__nose"></header>
+
+    <section class="space-shuttle">
+
+
+      <div class="space-shuttle__wings">
+        <div class="space-shuttle__wings__inner">
+          <div class="space-shuttle__wings__1"></div>
+          <div class="space-shuttle__wings__2"></div>
+        </div>
+      </div>
+
+      <div class="space-shuttle__wings space-shuttle__wings--2">
+        <div class="space-shuttle__wings__inner">
+          <div class="space-shuttle__wings__1"></div>
+          <div class="space-shuttle__wings__2"></div>
+        </div>
+      </div>
+
+
+      <footer class="space-shuttle__bottom">
+        <div class="space-shuttle__tail">
+          <div class="space-shuttle__tail__top"></div>
+          <div class="space-shuttle__tail__bottom"></div>
+        </div>
+        <div class="space-shuttle__engine space-shuttle__engine--left"></div>
+        <div class="space-shuttle__engine space-shuttle__engine--right"></div>
+      </footer>
+    </section>
+
+
+    <aside class="side-booster side-booster--left">
+      <header class="side-booster__nose"></header>
+      <span class="side-booster__stripe side-booster__stripe--1"></span>
+      <span class="side-booster__stripe side-booster__stripe--2"></span>
+      <span class="side-booster__stripe side-booster__stripe--3"></span>
+      <footer class="side-booster__engine"></footer>
+    </aside>
+
+    <aside class="side-booster side-booster--right">
+      <header class="side-booster__nose"></header>
+      <span class="side-booster__stripe side-booster__stripe--1"></span>
+      <span class="side-booster__stripe side-booster__stripe--2"></span>
+      <span class="side-booster__stripe side-booster__stripe--3"></span>
+      <footer class="side-booster__engine"></footer>
+    </aside>
+
+  </div>
+
+  
+  
+
+
+  
+</body>
+</html>

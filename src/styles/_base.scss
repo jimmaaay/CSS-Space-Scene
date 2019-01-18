@@ -1,0 +1,27 @@
+html {
+  --brown: #522b13;
+  --darkBrown: #4b2007;
+
+  --cream: #f4d5a4;
+  --darkCream: #e8b97f;
+
+  --lightOrange: #e89d38;
+  --darkLightOrange: #bf702d;
+
+  --darkOrange: #c54620;
+  --darkDarkOrange: #a53518;
+
+  --engineYellow: #efb23d;
+  --engineOrange: #e68431;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 62.5%;
+  padding: 2em;
+  background: #1c1611;
+  position: relative;
+  padding-top: 15em;
+}
+
