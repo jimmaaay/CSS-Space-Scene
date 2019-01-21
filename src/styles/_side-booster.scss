@@ -6,7 +6,8 @@
   bottom: -1em;
   z-index: 1;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
     display: block;
     position: absolute;
@@ -43,7 +44,8 @@
   }
 
   &__stripe {
-    background: var(--brown);
+    // background: var(--brown);
+    background: linear-gradient(to right, var(--brown) 50%, var(--darkBrown) 50%);
     height: 0.8em;
     display: block;
     position: absolute;
