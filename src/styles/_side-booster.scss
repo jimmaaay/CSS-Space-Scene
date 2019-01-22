@@ -1,17 +1,19 @@
 
 .side-booster {
-  height: 28em;
+  height: 30em;
   width: 3.4em;
   position: absolute;
-  bottom: -1em;
+  bottom: -3em;
   z-index: 1;
+  display: flex;
+  flex-direction: column-reverse;
 
   &::before,
   &::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 1.2em;
     left: 0;
     right: 0;
   }
@@ -44,7 +46,6 @@
   }
 
   &__stripe {
-    // background: var(--brown);
     background: linear-gradient(to right, var(--brown) 50%, var(--darkBrown) 50%);
     height: 0.8em;
     display: block;
@@ -67,8 +68,6 @@
   }
 
   &__engine {
-    position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
 
@@ -84,7 +83,6 @@
     }
 
     &::after {
-      position: absolute;
       content: '';
       display: block;
       height: 0;
@@ -92,17 +90,96 @@
       border-bottom: 0.7em solid var(--engineYellow);
       border-left: 0.3em solid transparent; 
       border-right: 0.3em solid transparent;
-      left: 50%;
-      transform: translateX(-50%);
     }
+
+  }
+
+  &__trail {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--lightTrail);
+    height: 5em;
+
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   top: 50%;
+    //   width: 2em;
+    //   height: 2em;
+    //   background: var(--lightTrail);
+    //   border-radius: 50%;
+
+    //   box-shadow: 
+    //     2em 0 0 var(--lightTrail),
+    //     -1em 0 0 var(--lightTrail);
+    // }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 5em;
+      height: 5em;
+      background: var(--lightTrail);
+      border-radius: 50%;
+      outline: 1px solid red;
+      margin-left: -0.8em;
+    }
+
   }
 
   &--left {
     right: 100%;
+
+    .side-booster__trail::after {
+
+      box-shadow: 
+        -3em 0 0 var(--lightTrail),
+
+        // Left outline of trail
+        -4em 4em 0 var(--lightTrail),
+        -7em 5em 0 var(--lightTrail),
+        -8em 8em 0 var(--lightTrail),
+        -11em 9em 0 var(--lightTrail),
+        -14em 11em 0 var(--lightTrail),
+        -17em 12em 0 var(--lightTrail),
+
+        // Right outline of trail
+        2em 3em 0 var(--lightTrail),
+        3em 6em 0 var(--lightTrail),
+        3.5em 8em 0 var(--lightTrail),
+        4em 11em 0 var(--lightTrail)
+    }
+
   }
 
   &--right {
     left: 100%;
+
+    .side-booster__trail::after {
+
+      box-shadow: 
+        -3em 0 0 var(--lightTrail),
+
+        // Right outline of trail
+        4em 4em 0 var(--lightTrail),
+        7em 5em 0 var(--lightTrail),
+        8em 8em 0 var(--lightTrail),
+        11em 9em 0 var(--lightTrail),
+        14em 11em 0 var(--lightTrail),
+        17em 12em 0 var(--lightTrail),
+
+        // Left outline of trail
+        -2em 3em 0 var(--lightTrail),
+        -3em 6em 0 var(--lightTrail),
+        -3.5em 8em 0 var(--lightTrail),
+        -4em 11em 0 var(--lightTrail)
+    }
+
   }
   
 }
