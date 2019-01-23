@@ -15,6 +15,7 @@ html {
   --engineOrange: #e68431;
 
   --lightTrail: #f7e9b9;
+  --darkTrail: #f3de8d;
 }
 
 body {
@@ -22,8 +23,16 @@ body {
   margin: 0;
   font-size: 62.5%;
   padding: 2em;
-  background: #1c1611;
+  background: #000;
   position: relative;
-  padding-top: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.scene {
+  background: #1c1611;
+  padding-bottom: 22em; // Useful for the side boosters trail
+  padding-top: 10em;
+  overflow: hidden;
+}

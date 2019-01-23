@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <svg>
+  <svg style="display: none;">
     <filter id="goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
       <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
@@ -16,69 +16,71 @@
     </filter>
   </svg>
 
-  <div class="big-rocket-ting">
-    <header class="big-rocket-ting__nose"></header>
+  <main class="scene">
 
-    <section class="space-shuttle">
-
-      <div class="space-shuttle__wings">
-        <div class="space-shuttle__wings__inner">
-          <div class="space-shuttle__wings__1"></div>
-          <div class="space-shuttle__wings__2"></div>
+    <div class="big-rocket-ting">
+      <header class="big-rocket-ting__nose"></header>
+  
+      <section class="space-shuttle">
+  
+        <div class="space-shuttle__wings">
+          <div class="space-shuttle__wings__inner">
+            <div class="space-shuttle__wings__1"></div>
+            <div class="space-shuttle__wings__2"></div>
+          </div>
         </div>
-      </div>
-
-      <div class="space-shuttle__wings space-shuttle__wings--2">
-        <div class="space-shuttle__wings__inner">
-          <div class="space-shuttle__wings__1"></div>
-          <div class="space-shuttle__wings__2"></div>
+  
+        <div class="space-shuttle__wings space-shuttle__wings--2">
+          <div class="space-shuttle__wings__inner">
+            <div class="space-shuttle__wings__1"></div>
+            <div class="space-shuttle__wings__2"></div>
+          </div>
         </div>
-      </div>
-
-      <div class="space-shuttle__line space-shuttle__line--1"></div>
-      <div class="space-shuttle__line space-shuttle__line--2"></div>
-
-      <div class="space-shuttle__windows">
-        <div class="space-shuttle__windows__middle">
-          <div class="space-shuttle__windows__middle__line"></div>
+  
+        <div class="space-shuttle__line space-shuttle__line--1"></div>
+        <div class="space-shuttle__line space-shuttle__line--2"></div>
+  
+        <div class="space-shuttle__windows">
+          <div class="space-shuttle__windows__middle">
+            <div class="space-shuttle__windows__middle__line"></div>
+          </div>
         </div>
-      </div>
-
-
-      <footer class="space-shuttle__bottom">
-        <div class="space-shuttle__tail">
-          <div class="space-shuttle__tail__top"></div>
-          <div class="space-shuttle__tail__bottom"></div>
-        </div>
-        <div class="space-shuttle__engine space-shuttle__engine--left"></div>
-        <div class="space-shuttle__engine space-shuttle__engine--right"></div>
-      </footer>
-    </section>
-
-
-    <aside class="side-booster side-booster--left">
-      <header class="side-booster__nose"></header>
-      <span class="side-booster__stripe side-booster__stripe--1"></span>
-      <span class="side-booster__stripe side-booster__stripe--2"></span>
-      <span class="side-booster__stripe side-booster__stripe--3"></span>
-      <footer class="side-booster__engine"></footer>
-      <div class="side-booster__trail"></div>
-    </aside>
-
-    <aside class="side-booster side-booster--right">
-      <header class="side-booster__nose"></header>
-      <span class="side-booster__stripe side-booster__stripe--1"></span>
-      <span class="side-booster__stripe side-booster__stripe--2"></span>
-      <span class="side-booster__stripe side-booster__stripe--3"></span>
-      <footer class="side-booster__engine"></footer>
-      <div class="side-booster__trail"></div>
-    </aside>
-
-  </div>
-
   
   
+        <footer class="space-shuttle__bottom">
+          <div class="space-shuttle__tail">
+            <div class="space-shuttle__tail__top"></div>
+            <div class="space-shuttle__tail__bottom"></div>
+          </div>
+          <div class="space-shuttle__engine space-shuttle__engine--left"></div>
+          <div class="space-shuttle__engine space-shuttle__engine--right"></div>
+        </footer>
+      </section>
+  
+  
+      <aside class="side-booster side-booster--left">
+        <header class="side-booster__nose"></header>
+        <span class="side-booster__stripe side-booster__stripe--1"></span>
+        <span class="side-booster__stripe side-booster__stripe--2"></span>
+        <span class="side-booster__stripe side-booster__stripe--3"></span>
+        <footer class="side-booster__engine"></footer>
+        <div class="side-booster__trail"></div>
+        <div class="side-booster__trail-dark"></div>
+      </aside>
+  
+      <aside class="side-booster side-booster--right">
+        <header class="side-booster__nose"></header>
+        <span class="side-booster__stripe side-booster__stripe--1"></span>
+        <span class="side-booster__stripe side-booster__stripe--2"></span>
+        <span class="side-booster__stripe side-booster__stripe--3"></span>
+        <footer class="side-booster__engine"></footer>
+        <div class="side-booster__trail"></div>
+        <div class="side-booster__trail-dark"></div>
+      </aside>
+  
+    </div>
 
+  </main>
 
   
 </body>

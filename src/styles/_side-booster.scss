@@ -102,20 +102,14 @@
     background: var(--lightTrail);
     height: 5em;
 
-    // &::before {
-    //   content: '';
-    //   display: block;
-    //   position: absolute;
-    //   top: 50%;
-    //   width: 2em;
-    //   height: 2em;
-    //   background: var(--lightTrail);
-    //   border-radius: 50%;
-
-    //   box-shadow: 
-    //     2em 0 0 var(--lightTrail),
-    //     -1em 0 0 var(--lightTrail);
-    // }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3em;
+      border-style: solid;
+      border-color: transparent transparent var(--lightTrail) transparent;
+    }
 
     &::after {
       content: '';
@@ -126,33 +120,77 @@
       height: 5em;
       background: var(--lightTrail);
       border-radius: 50%;
-      outline: 1px solid red;
       margin-left: -0.8em;
     }
 
   }
 
+  &__trail-dark {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 16em;
+      // left: 0;
+      background: var(--darkTrail);
+      height: 7em;
+      width: 7em;
+      border-radius: 50%;
+    }
+  }
+
   &--left {
     right: 100%;
 
-    .side-booster__trail::after {
+    .side-booster {
 
-      box-shadow: 
-        -3em 0 0 var(--lightTrail),
+      &__trail {
 
-        // Left outline of trail
-        -4em 4em 0 var(--lightTrail),
-        -7em 5em 0 var(--lightTrail),
-        -8em 8em 0 var(--lightTrail),
-        -11em 9em 0 var(--lightTrail),
-        -14em 11em 0 var(--lightTrail),
-        -17em 12em 0 var(--lightTrail),
+        &::before {
+          right: -2em;
+          border-width: 0 2em 18em 17em;
+        }
 
-        // Right outline of trail
-        2em 3em 0 var(--lightTrail),
-        3em 6em 0 var(--lightTrail),
-        3.5em 8em 0 var(--lightTrail),
-        4em 11em 0 var(--lightTrail)
+        &::after {
+          box-shadow:
+            // Above outline of trail
+            0 -1em 0 var(--lightTrail),
+
+            // Left outline of trail
+            -2em 1em 0 var(--lightTrail),
+            -4em 4em 0 var(--lightTrail),
+            -7em 5em 0 var(--lightTrail),
+            -8em 8em 0 var(--lightTrail),
+            -11em 9em 0 var(--lightTrail),
+            -14em 11em 0 var(--lightTrail),
+            -17em 12em 0 var(--lightTrail),
+
+            // Right outline of trail
+            2em 3em 0 var(--lightTrail),
+            3em 6em 0 var(--lightTrail),
+            3.5em 8em 0 var(--lightTrail),
+            4em 11em 0 var(--lightTrail)
+        }
+
+      }
+
+      &__trail-dark {
+
+        &::before {
+          left: 0;
+
+          box-shadow:
+            -5em 1em 0 var(--darkTrail),
+            -8em 2em 0 var(--darkTrail);
+        }
+
+      }
+
     }
 
   }
@@ -160,25 +198,53 @@
   &--right {
     left: 100%;
 
-    .side-booster__trail::after {
+    .side-booster {
 
-      box-shadow: 
-        -3em 0 0 var(--lightTrail),
+      &__trail {
 
-        // Right outline of trail
-        4em 4em 0 var(--lightTrail),
-        7em 5em 0 var(--lightTrail),
-        8em 8em 0 var(--lightTrail),
-        11em 9em 0 var(--lightTrail),
-        14em 11em 0 var(--lightTrail),
-        17em 12em 0 var(--lightTrail),
+        &::before {
+          left: -2em;
+          border-width: 0 17em 18em 2em;
+        }
+  
+        &::after {
+          box-shadow:
+            // Above outline of trail
+            0 -1em 0 var(--lightTrail),
+  
+            // Right outline of trail
+            2em 1em 0 var(--lightTrail),
+            4em 4em 0 var(--lightTrail),
+            7em 5em 0 var(--lightTrail),
+            8em 8em 0 var(--lightTrail),
+            11em 9em 0 var(--lightTrail),
+            14em 11em 0 var(--lightTrail),
+            17em 12em 0 var(--lightTrail),
+  
+            // Left outline of trail
+            -2em 3em 0 var(--lightTrail),
+            -3em 6em 0 var(--lightTrail),
+            -3.5em 8em 0 var(--lightTrail),
+            -4em 11em 0 var(--lightTrail)
+        }
+  
+      }
 
-        // Left outline of trail
-        -2em 3em 0 var(--lightTrail),
-        -3em 6em 0 var(--lightTrail),
-        -3.5em 8em 0 var(--lightTrail),
-        -4em 11em 0 var(--lightTrail)
+      &__trail-dark {
+        
+        &::before {
+          right: 2em;
+          box-shadow:
+            4em 1em 0 var(--darkTrail),
+            4em -3em 0 var(--darkTrail),
+            8em 1em 0 var(--darkTrail),
+            12em 2em 0 var(--darkTrail);
+        }
+
+      }
+
     }
+
 
   }
   
