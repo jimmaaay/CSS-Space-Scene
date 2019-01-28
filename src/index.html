@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <svg style="display: none;">
+  <svg style="height: 0; overflow: hidden;">
     <filter id="goo">
       <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
       <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
@@ -79,6 +79,13 @@
       </aside>
   
     </div>
+
+    <section class="planet">
+      <div class="mountain mountain--1"></div>
+      <div class="mountain mountain--2"></div>
+      <div class="mountain mountain--3"></div>
+      <div class="mountain mountain--4"></div>
+    </section>
 
   </main>
 

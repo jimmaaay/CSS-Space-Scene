@@ -1,0 +1,40 @@
+.mountain {
+  position: absolute;
+  width: 18em;
+  height: 12em;
+  background: linear-gradient(to right, #69705b 50%, #5d6a5e 50%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3em;
+    background: linear-gradient(to right, #fff 50%, #ededed 50%);
+  }
+
+  &--1 {
+    left: -1em;
+    bottom: -3em;
+  }
+
+  &--2 {
+    left: 7em;
+    bottom: 0;
+  }
+
+  &--3 {
+    right: 10em;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &--4 {
+    right: -1em;
+    bottom: -4em;
+  }
+
+}

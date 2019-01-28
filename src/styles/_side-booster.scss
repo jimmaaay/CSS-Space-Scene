@@ -75,7 +75,7 @@
       content: '';
       display: block;
       height: 0;
-      width: 1.8em;
+      width: 2.6em;
       border-bottom: 0.5em solid var(--engineOrange);
       border-left: 0.2em solid transparent; 
       border-right: 0.2em solid transparent;
@@ -86,10 +86,11 @@
       content: '';
       display: block;
       height: 0;
-      width: 2.8em;
+      width: 3.8em;
       border-bottom: 0.7em solid var(--engineYellow);
       border-left: 0.3em solid transparent; 
       border-right: 0.3em solid transparent;
+      margin: 0 0 0 -0.2em;
     }
 
   }
