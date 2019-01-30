@@ -4,6 +4,7 @@
   height: 12em;
   background: linear-gradient(to right, #69705b 50%, #5d6a5e 50%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: 1;
 
   &::before {
     content: '';

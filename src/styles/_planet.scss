@@ -1,9 +1,92 @@
 .planet {
-  height: 10em;
+  background: red;
+  border-radius: 50%;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background: linear-gradient(to bottom, #b7bfaa 3.5em, #ced8c1 3.5em);
+
+  &__crater {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.3);
+    width: var(--dimensions);
+    height: var(--dimensions);
+
+    &--not-round {
+      background: radial-gradient(
+        circle at 90% 30%,
+        rgba(0,0,0,0) calc(var(--dimensions) / 5),
+        rgba(0,0,0,0.3) calc(var(--dimensions) / 5)
+      );
+    }
+
+  }
+
+  &--1 {
+    width: 9.4em;
+    height: 9.4em;
+    top: 3em;
+    left: 3em;
+    background: linear-gradient(to right, #626450 50%, #494a3c 50%);
+
+    .planet__crater {
+
+      &--1 {
+        --dimensions: 1.6em;
+        top: 1em;
+        left: 2.4em;
+        transform: rotate(165deg);
+      }
+
+      &--2 {
+        --dimensions: 1.4em;
+        top: 3.6em;
+        left: 2.6em;
+      }
+
+      &--3 {
+        --dimensions: 1.8em;
+        top: 6.4em;
+        left: 2.4em;
+      }
+
+      &--4 {
+        --dimensions: 0.6em;
+        top: 3.2em;
+        left: 1em;
+      }
+
+      &--5 {
+        --dimensions: 0.6em;
+        top: 5.4em;
+        left: 0.8em;
+      }
+
+      &--6 {
+        --dimensions: 1em;
+        top: 1em;
+        right: 3em;
+      }
+
+      &--7 {
+        --dimensions: 0.8em;
+        top: 3em;
+        right: 1em;
+      }
+
+      &--8 {
+        --dimensions: 1.8em;
+        top: 4em;
+        right: 2em;
+        transform: rotate(75deg);
+      }
+
+      &--9 {
+        --dimensions: 0.8em;
+        top: 7em;
+        right: 2.4em;
+      }
+
+    }
+
+  }
+
 }
