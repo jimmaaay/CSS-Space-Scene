@@ -4,9 +4,10 @@
   position: absolute;
 
   &__crater {
+    --craterOpacity: 0.4;
     position: absolute;
     border-radius: 50%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,var(--craterOpacity));
     width: var(--dimensions);
     height: var(--dimensions);
 
@@ -14,7 +15,7 @@
       background: radial-gradient(
         circle at 90% 30%,
         rgba(0,0,0,0) calc(var(--dimensions) / 5),
-        rgba(0,0,0,0.3) calc(var(--dimensions) / 5)
+        rgba(0,0,0,0.4) calc(var(--dimensions) / 5)
       );
     }
 
@@ -87,6 +88,96 @@
 
     }
 
+  }
+
+
+  &--2 {
+    background: linear-gradient(to right, #8c7a62 50%, #736451 50%);
+    height: 3.2em;
+    width: 3.2em;
+    top: 3em;
+    left: 15.4em;
+
+    .planet__crater {
+
+      &--1 {
+        --dimensions: 0.4em;
+        top: 0.6em;
+        left: 0.8em;
+      }
+
+      &--2 {
+        --dimensions: 0.6em;
+        top: 1.4em;
+        left: 0.8em;
+      }
+
+      &--3 {
+        --dimensions: 0.4em;
+        top: 1.6em;
+        left: 0.6em;
+      }
+
+      &--4 {
+        --dimensions: 0.4em;
+        top: 2.4em;
+        left: 1em;
+      }
+
+      &--5 {
+        --dimensions: 0.8em;
+        top: 1em;
+        left: 2em;
+      }
+
+      &--6 {
+        --dimensions: 0.4em;
+        top: 2em;
+        left: 2em;
+      }
+
+    }
+
+  }
+
+  &--3 {
+    background: linear-gradient(to right, #995823 50%, #804317 50%);
+    height: 5em;
+    width: 5em;
+    top: 4em;
+    right: 6em;
+
+    .planet__crater {
+      --craterOpacity: 0.2;
+
+      &--1 {
+        --dimensions: 1.2em;
+        top: 2em;
+        left: 0.8em;
+      }
+
+      &--2 {
+        --dimensions: 0.6em;
+        top: 1.8em;
+        right: 0.8em;
+      }
+
+      &--3 {
+        --dimensions: 0.8em;
+        top: 3.2em;
+        right: 1em;
+      }
+
+    }
+
+  }
+
+  &--4 {
+    background: linear-gradient(to right, #433c31 50%, #332f2a 50%);
+    width: 1.6em;
+    height: 1.6em;
+    right: 4em;
+    top: 1.6em;
   }
 
 }
