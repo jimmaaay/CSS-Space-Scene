@@ -1,0 +1,21 @@
+.satellite {
+  position: absolute;
+  top: 20em;
+  right: 1.6em;
+  display: flex;
+  align-items: center;
+
+  &__middle {
+    width: 6.4em;
+    height: 6.4em;
+    border-radius: 50%;
+    background: linear-gradient(to right, #544c3f 50%, #3e372c 50%);
+  }
+
+  &__panels {
+    height: 3.6em;
+    width: 6.6em;
+    background: pink;
+  }
+
+}
