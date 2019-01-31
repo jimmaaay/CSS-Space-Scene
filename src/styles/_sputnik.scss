@@ -1,0 +1,52 @@
+.sputnik {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  left: 8em;
+  top: 25.4em;
+  background: linear-gradient(to right, #51493c 50%, #3e372d 50%);
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0.6em;
+    height: 0.6em;
+    background: #d6c5a8;
+    position: absolute;
+    top: 0.6em;
+    left: 0.8em;
+    border-radius: 50%;
+  }
+
+  &__aerial {
+    display: block;
+    width: 8.8em;
+    background: #514a40;
+    height: 0.2em;
+    position: absolute;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+
+    &--1 {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2em;
+    }
+
+    &--2 {
+      top: 0;
+      right: 2em;
+      transform-origin: right center;
+      transform: rotate(15deg);
+    }
+
+    &--3 {
+      bottom: 0;
+      right: 2em;
+      transform-origin: right center;
+      transform: rotate(-15deg);
+    }
+
+  }
+
+}
