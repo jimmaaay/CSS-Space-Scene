@@ -11,7 +11,8 @@
     border-radius: 50%;
     background: linear-gradient(to right, #544c3f 50%, #3e372c 50%);
     box-shadow: 0 0.3em 0 #7c7160;
-    margin: 0 0.8em;
+    margin: 0 1em;
+    position: relative;
 
     &::before {
       content: '';
@@ -39,6 +40,47 @@
       right: 0;
     }
 
+    &__panel-connector {
+      display: block;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        height: 0.4em;
+        width: 1.4em;
+        background: #544c3f;
+        transform-origin: right center;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate(-40deg);
+      }
+
+      &::after {
+        transform: rotate(40deg);
+      }
+
+      &--1 {
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+      }
+
+      &--2 {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%) scaleX(-1);
+      }
+
+    }
+
   }
 
   &__panels {
@@ -50,6 +92,7 @@
     grid-template-rows: 1fr 1fr 1em;
     position: relative;
     box-shadow: 0 0.3em 0 #a59780;
+    z-index: 1;
 
     &::before,
     &::after {

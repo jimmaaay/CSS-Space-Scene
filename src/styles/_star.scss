@@ -1,0 +1,8 @@
+// @see https://stackoverflow.com/questions/40552950/is-it-possible-to-generate-a-box-shadow-that-follows-the-shape-of-a-clip-path-po
+.star {
+  display: block;
+  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  width: 1em;
+  height: 1em;
+  background: red;
+}
