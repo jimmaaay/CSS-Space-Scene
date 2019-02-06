@@ -11,4 +11,37 @@
     #27211a 36em,
     #3f3a2e 36em,
   );
+
+  &__line {
+    width: var(--dimensions);
+    height: var(--dimensions);
+    border: 0.3em dotted #4a4743;
+    border-radius: 50%;
+    position: absolute;
+
+    &--1 {
+      --dimensions: 70em;
+      bottom: -24em;
+      left: -45em;
+    }
+
+    &--2 {
+      --dimensions: 250em;
+      top: 30em;
+      right: -50em;
+    }
+
+    &--3 {
+      --dimensions: 80em;
+      top: 30em;
+      right: -40em;
+    }
+
+    &--4 {
+      --dimensions: 350em;
+      top: -30em;
+      left: -12em;
+    }
+
+  }
 }
