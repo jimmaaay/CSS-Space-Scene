@@ -1,0 +1,36 @@
+.star-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: 
+    drop-shadow(10em -4em var(--starColour))
+    drop-shadow(10em 0em var(--starColour))
+    drop-shadow(40em 0em var(--starColour))
+    drop-shadow(10em 10em var(--starColour))
+    drop-shadow(-30em 0 var(--starColour))
+    drop-shadow(0em -30em var(--starColour));
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background: var(--starColour);
+    width: 0.4em;
+    height: 0.4em;
+    position: absolute;
+  }
+
+  &::before {
+    top: 16em;
+    left: 20em;
+  }
+
+  &::after {
+    top: 10em;
+    left: 16em;
+  }
+
+}
