@@ -1,0 +1,58 @@
+.cloud {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  background: var(--cloudColour);
+  bottom: 10em;
+  border-radius: 50%;
+
+  &::before{
+    content: '';
+    background: var(--cloudColour);
+    border-radius: 50%;
+    display: block;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+  }
+
+
+  &--1 {
+    left: 2em;
+    bottom: 9em;
+
+    box-shadow: 
+      -8em -3em 0 var(--cloudColour),
+      -8em 3em 0 var(--cloudColour),
+      8em 2em 0 var(--cloudColour);
+
+    &::before {
+      left: 17em;
+      bottom: -1em;
+    }
+
+  }
+
+  &--2 {
+    right: -7em;
+    bottom: 18em;
+
+    box-shadow: 
+      -7em 6em 0 var(--cloudColour),
+      -20em 10em 0 var(--cloudColour),
+
+      // filling in gaps
+      -4em 9em 0 var(--cloudColour),
+      -12em 12em 0 var(--cloudColour);
+
+
+    &::before {
+      width: 8em;
+      height: 8em;
+      right: 15em;
+      bottom: -4em;
+      box-shadow: -12em 9em 0 var(--cloudColour);
+    }
+  }
+
+}
