@@ -9,7 +9,7 @@
     width: 6.4em;
     height: 6.4em;
     border-radius: 50%;
-    background: linear-gradient(to right, #544c3f 50%, #3e372c 50%);
+    background: linear-gradient(to right, var(--satelliteLight) 50%, var(--satelliteDark) 50%);
     box-shadow: 0 0.3em 0 #7c7160;
     margin: 0 1em;
     position: relative;
@@ -32,7 +32,7 @@
       display: block;
       width: 0.4em;
       height: 1em;
-      background: #544c3f;
+      background: var(--satelliteLight);
       margin: 0 auto;
       position: absolute;
       top: 100%;
@@ -50,7 +50,7 @@
         display: block;
         height: 0.4em;
         width: 1.4em;
-        background: #544c3f;
+        background: var(--satelliteLight);
         transform-origin: right center;
         position: absolute;
         right: 0;
