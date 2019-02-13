@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "gulp dev --gulpfile tasks"
+    "dev": "gulp dev --gulpfile tasks",
+    "build": "gulp build --gulpfile tasks"
   },
   "repository": {
     "type": "git",

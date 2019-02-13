@@ -10,3 +10,9 @@ module.exports.dev = gulp.series(
   styles,
   server,
 );
+
+module.exports.build = gulp.series(
+  clean,
+  html,
+  styles,
+);
