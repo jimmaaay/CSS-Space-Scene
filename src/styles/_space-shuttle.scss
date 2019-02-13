@@ -188,6 +188,26 @@
       transform: translateX(-50%) scale(0.92) translateY(0.85em);
       color: #e66f2c;
 
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 3.4em;
+        height: 0.5em;
+        background: #eed0a1;
+        position: absolute;
+        z-index: 1;
+        bottom: 0.6em;
+      }
+
+      &::before {
+        left: 0.9em;
+      }
+
+      &::after {
+        right: 0.9em;
+      }
+
       .space-shuttle__wings__1 {
         width: 7.5em;
       }
