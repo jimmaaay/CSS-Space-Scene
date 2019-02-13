@@ -5,7 +5,7 @@
   border-radius: 50%;
   left: 8em;
   top: 25.4em;
-  background: linear-gradient(to right, #51493c 50%, #3e372d 50%);
+  background: linear-gradient(to right, var(--satelliteLight) 50%, var(--satelliteDark) 50%);
 
   &::before {
     content: '';

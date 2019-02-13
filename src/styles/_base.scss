@@ -23,6 +23,8 @@ html {
 
   --satelliteLight: #544c3f;
   --satelliteDark: #3e372c;
+  --satelliteAccent: #2d2722;
+  --satelliteLightAccent: #7c7160;
 }
 
 *, *::before, *::after {
@@ -36,7 +38,7 @@ body {
   margin: 0;
   font-size: 62.5%;
   padding: 2em;
-  background: #000;
+  background: #141414;
   position: relative;
   display: flex;
   flex-direction: column;

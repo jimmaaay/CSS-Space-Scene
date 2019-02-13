@@ -10,7 +10,7 @@
     height: 6.4em;
     border-radius: 50%;
     background: linear-gradient(to right, var(--satelliteLight) 50%, var(--satelliteDark) 50%);
-    box-shadow: 0 0.3em 0 #7c7160;
+    box-shadow: 0 0.3em 0 var(--satelliteLightAccent);
     margin: 0 1em;
     position: relative;
 
@@ -24,7 +24,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 0.7em solid #2d2722;
+      border: 0.7em solid var(--satelliteAccent);
     }
 
     &::after {
@@ -91,14 +91,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr 1em;
     position: relative;
-    box-shadow: 0 0.3em 0 #a59780;
+    box-shadow: 0 0.3em 0 var(--satelliteLightAccent);
     z-index: 1;
 
     &::before,
     &::after {
       content: '';
       display: block;
-      background: #2e2a25;
+      background: var(--satelliteAccent);
       position: absolute;
     }
 
@@ -106,14 +106,14 @@
       height: 0.2em;
       width: 100%;
       bottom: 0.9em;
-      box-shadow: 0 -1.3em 0 #2e2a25;
+      box-shadow: 0 -1.3em 0 var(--satelliteAccent);
     }
 
     &::after {
       width: 0.2em;
       height: 100%;
       left: 2.1em;
-      box-shadow: 2.2em 0 0 #2e2a25;
+      box-shadow: 2.2em 0 0 var(--satelliteAccent);
     }
 
     &--1 {
@@ -159,7 +159,7 @@
   }
 
   &__panel {
-    background: #40392f;
+    background: var(--satelliteDark);
   }
 
   &__dish {
@@ -170,7 +170,7 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: #7e7362;
+    background: var(--satelliteLightAccent);
     margin-top: 1em;
     box-shadow: 0 -0.1em 0 #a59780;
 
@@ -184,14 +184,14 @@
       border-radius: 50%;
       width: 0.5em;
       height: 0.5em;
-      background: #25211d;
+      background: var(--satelliteAccent);
     }
 
     &__line {
       display: block;
       width: 0.2em;
       height: 1em;
-      background: #25211d;
+      background: var(--satelliteAccent);
       position: absolute;
       left: 0;
       right: 0;
